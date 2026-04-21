@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Destripando Internet · Descargas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --red:    #b8321a;
+        --cream:  #f0e6c8;
+        --yellow: #e8a020;
+        --blue:   #4a72a8;
+        --bg:     #18110c;
+        --bg2:    #221810;
+        --text:   #d8ceb4;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: Georgia, 'Times New Roman', serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      /* ── HERO ─────────────────────────────────────── */
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem 2rem;
+        border-bottom: 3px solid var(--red);
+        background: var(--bg2);
+      }
+
+      .cover-wrap {
+        width: 140px;
+        flex-shrink: 0;
+        filter: drop-shadow(0 6px 20px rgba(0,0,0,.7));
+      }
+
+      .cover-wrap img { display: block; width: 100%; }
+
+      .hero-text {
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      header h1 {
+        font-family: 'Bebas Neue', Georgia, serif;
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        font-weight: 400;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: var(--cream);
+        line-height: 1.0;
+      }
+
+      header h1 span {
+        display: block;
+        font-size: .55em;
+        letter-spacing: .18em;
+        color: var(--red);
+        font-weight: 400;
+        margin-bottom: .15em;
+      }
+
+      header p {
+        font-size: .95rem;
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      .btn-main {
+        align-self: flex-start;
+        display: inline-block;
+        padding: .65rem 1.6rem;
+        background: var(--red);
+        color: var(--cream);
+        font-family: inherit;
+        font-size: .95rem;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: .04em;
+        border: 1px solid #d04020;
+        transition: background .15s, color .15s;
+      }
+
+      .btn-main:hover {
+        background: #d04020;
+        color: #fff;
+      }
+
+      /* ── CHAPTERS ─────────────────────────────────── */
+      main {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 4rem;
+      }
+
+      .chapters h2 {
+        font-size: .8rem;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        color: var(--yellow);
+        padding-bottom: .5rem;
+        border-bottom: 1px solid rgba(232,160,32,.2);
+        margin-bottom: 1rem;
+      }
+
+      .chapters ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .chapters li a {
+        display: block;
+        padding: .5rem .9rem;
+        background: var(--bg2);
+        color: var(--text);
+        text-decoration: none;
+        font-family: system-ui, sans-serif;
+        font-size: .85rem;
+        border-left: 3px solid transparent;
+        transition: background .15s, border-color .15s, color .15s;
+      }
+
+      .chapters li a:hover {
+        background: #2a1e14;
+        border-left-color: var(--blue);
+        color: var(--cream);
+      }
+
+      /* ── FOOTER ───────────────────────────────────── */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: .75rem;
+        color: rgba(216,206,180,.3);
+        border-top: 1px solid rgba(216,206,180,.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="cover-wrap">
+        <img src="cover.jpg" alt="Portada de Destripando Internet" />
+      </div>
+      <div class="hero-text">
+        <h1><span>Descargas</span>Destripando Internet</h1>
+        <p>Descarga el libro completo o los capítulos por separado.</p>
+      <a class="btn-main" href="destripando-internet.pdf" download>
+        ⬇ Descargar libro completo
+      </a>
+      </div>
+    </header>
+
+    <main>
+    <section class="chapters">
+      <h2>Capítulos</h2>
+      <ul>
+        <li><a href="01-%C3%8Dndice%20general.pdf" download>00. Índice general</a></li>
+        <li><a href="02-Prefacio.pdf" download>00. Prefacio</a></li>
+        <li><a href="03-Debian%20GNU_Linux.pdf" download>01. Debian GNU_Linux</a></li>
+        <li><a href="04-Shell.pdf" download>02. Shell</a></li>
+        <li><a href="05-Python.pdf" download>03. Python</a></li>
+        <li><a href="06-Internet.pdf" download>04. Internet</a></li>
+        <li><a href="07-Protocolos%20esenciales.pdf" download>05. Protocolos esenciales</a></li>
+        <li><a href="08-Sockets.pdf" download>06. Sockets</a></li>
+        <li><a href="09-Direccionamiento%20IP.pdf" download>07. Direccionamiento IP</a></li>
+        <li><a href="10-Interconexi%C3%B3n.pdf" download>08. Interconexión</a></li>
+        <li><a href="11-Encaminamiento%20din%C3%A1mico.pdf" download>09. Encaminamiento dinámico</a></li>
+        <li><a href="12-Configuraci%C3%B3n%20IP.pdf" download>10. Configuración IP</a></li>
+        <li><a href="13-Confiabilidad%20y%20control%20de%20flujo.pdf" download>11. Confiabilidad y control de flujo</a></li>
+        <li><a href="14-Confiabilidad%20y%20control%20de%20flujo%20en%20TCP.pdf" download>12. Confiabilidad y control de flujo en TCP</a></li>
+        <li><a href="15-Control%20de%20congesti%C3%B3n.pdf" download>13. Control de congestión</a></li>
+        <li><a href="16-Cliente-Servidor.pdf" download>14. Cliente Servidor</a></li>
+        <li><a href="17-Publicador-Suscriptor.pdf" download>15. Publicador Suscriptor</a></li>
+        <li><a href="18-Calidad%20de%20servicio.pdf" download>16. Calidad de servicio</a></li>
+        <li><a href="19-Serializaci%C3%B3n.pdf" download>17. Serialización</a></li>
+        <li><a href="20-Captura%20y%20an%C3%A1lisis.pdf" download>18. Captura y análisis</a></li>
+        <li><a href="21-Sockets%20raw.pdf" download>19. Sockets raw</a></li>
+        <li><a href="22-Redes%20Privadas.pdf" download>20. Redes Privadas</a></li>
+        <li><a href="23-DNS.pdf" download>21. DNS</a></li>
+        <li><a href="24-SSH.pdf" download>22. SSH</a></li>
+        <li><a href="25-Ep%C3%ADlogo.pdf" download>23. Epílogo</a></li>
+        <li><a href="26-Comandos%20habituales.pdf" download>24. Comandos habituales</a></li>
+        <li><a href="27-Otros%20comandos%20de%20red.pdf" download>25. Otros comandos de red</a></li>
+        <li><a href="28-Docker.pdf" download>26. Docker</a></li>
+        <li><a href="29-Unidades.pdf" download>27. Unidades</a></li>
+        <li><a href="30-Referencias.pdf" download>28. Referencias</a></li>
+      </ul>
+    </section>
+    </main>
+
+    <footer>
+      Destripando Internet &mdash; todos los derechos reservados
+    </footer>
+  </body>
+</html>
